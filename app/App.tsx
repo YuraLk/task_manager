@@ -5,13 +5,13 @@ import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const App: React.FC = () => {
+
   return (
     <View style={styles.container}>
       <LinearGradient
         colors={['#232526', '#66686a']}
         style={{ position: 'absolute', left: 0, right: 0, top: 0, bottom: 0 }}
       />
-
       <View style={{ position: 'absolute', bottom: 50, left: 0, right: 0, alignItems: 'center' }}>
         <Image
           style={{ width: 100, height: 100 }}
@@ -19,7 +19,6 @@ const App: React.FC = () => {
           source="https://raw.githubusercontent.com/expo/styleguide/main/common/logos/word-mark-logo.svg"
         />
       </View>
-
       <Image
         style={{ width: 200, height: 200 }}
         contentFit="contain"
@@ -29,12 +28,10 @@ const App: React.FC = () => {
       <Text style={{ fontSize: 22, marginTop: 15, color: '#fff' }}>
         New Architecture: <Text style={{ fontWeight: 'bold' }}>Enabled</Text>
       </Text>
-
-      < StatusBar style="auto" />
+      <StatusBar style="auto" />
     </View>
   );
-}
-
+};
 export default App;
 
 const styles = StyleSheet.create({
