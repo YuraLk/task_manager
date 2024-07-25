@@ -1,0 +1,21 @@
+services:
+  task_manager:
+    build:
+      context: .
+      target: development
+    container_name: task_manager_app
+    tty: true
+    env_file:
+      - ./app/.env
+    ports:
+      - '8081:8081'
+    volumes:
+      - ./app:/opt/app/app:delegated
+      - ./app/package.json:/opt/app/package.json
+      - ./app/package-lock.json:/opt/app/package-lock.json
+      - notused:/opt/app/app/node_modules
+    healthcheck:
+      disable: true
+
+volumes:
+  notused:
