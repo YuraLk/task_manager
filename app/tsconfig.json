@@ -12,17 +12,11 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*",
-      ]
+      "@/*": ["src/*"]
     },
     "resolveJsonModule": true,
-    "lib": [
-      "esnext"
-    ],
+    "lib": ["esnext"]
   },
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
   "extends": "expo/tsconfig.base"
 }

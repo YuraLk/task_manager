@@ -4,10 +4,12 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "lint": "eslint ."
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,md}'"
   },
   "dependencies": {
     "@expo/metro-runtime": "~3.2.1",
+    "@react-native-async-storage/async-storage": "1.23.1",
     "expo": "^51.0.0",
     "expo-build-properties": "~0.12.0",
     "expo-image": "~1.12.7",
@@ -17,13 +19,20 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.74.3",
-    "react-native-web": "~0.19.10"
+    "react-native-paper": "^5.12.3",
+    "react-native-safe-area-context": "^4.10.8",
+    "react-native-vector-icons": "^10.1.0",
+    "react-native-web": "~0.19.10",
+    "zustand": "^4.5.4",
+    "react-native-gesture-handler": "~2.16.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/expo": "^32.0.13",
     "@types/react": "^18.3.3",
     "@types/react-native": "^0.72.8",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
     "eslint": "^8.57.0",
     "eslint-config-expo": "^7.0.0",
     "eslint-config-prettier": "^9.1.0",
